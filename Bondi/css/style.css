@@ -1,0 +1,279 @@
+:root {
+    --main-color: #e98b2c;
+    --dark: #1b1b22;
+    --dark-light: #32323a;
+    --white: #fff;
+    --white-light: #c8c8c8;
+  }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--white-light);
+}
+
+.main-btn {
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: .5rem 1rem;
+}
+
+.main-title h2 {
+    color: var(--dark);
+    
+}
+
+.main-title::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background: var(--main-color);
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/************** start navbar ***********/
+.navbar{
+    background-color: var(--dark-light);
+}
+
+.navbar .navbar-nav .nav-link {
+    color: var(--white-light);
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+    color: var(--main-color);
+}
+.navbar-toggler {
+    color: var(--white-light);
+    font-size: 25px;
+    border: 1px solid var(--white-light);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+ .search {
+    color: var(--white-light);
+}
+
+.search {
+    border-left: 1px solid var(--main-color);
+}
+
+/************** end navbar ***********/
+
+/************** start landing ***********/
+.landing {
+    background: var(--dark-light);
+    min-height: calc(100vh - 72px);
+}
+
+
+.landing h1 {
+    color: var(--white);
+}
+
+.landing span 
+{
+    color: var(--main-color);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.land-btn {
+    padding: 5px 30px;
+    font-size: 20px;
+}
+/************** end landing ***********/
+
+/************** start feature ***********/
+.features .icon-holder {
+    height: 200px;
+}
+.features .icon-holder svg {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.features .icon-holder .number {
+    font-size: 12rem;
+    opacity: .2;
+}
+
+.features .icon-holder .icon {
+    color: var(--main-color);
+}
+
+.features .feat h4 {
+    color: var(--main-color);
+}
+/************** end feature ***********/
+
+/************** start work ***********/
+.work  {
+    background-color: var(--dark);
+}
+
+.work .main-title h2 {
+    color: var(--white);
+}
+
+.work ul .active {
+    background-color: var(--main-color);
+    color: var(--white);
+    transition: .3s;
+}
+
+.work ul li:not(.active):hover {
+    color: var(--main-color);
+}
+
+.work ul li {
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+
+.work .box {
+    padding: 7px;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--dark-light);
+}
+
+.work .box::before {
+    content: attr(data-work);
+    position: absolute;
+    background-color: rgb(0, 0,0, .5);
+    color: var(--white);
+    width: 0;
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.work .box:hover::before {
+    width: calc(100% - 10px);
+    opacity: 1;
+}
+/************** end work ***********/
+
+/************** start about ***********/
+.desc {
+    max-width: 500px;
+    
+}
+
+.text h4 {
+    color: var(--dark);
+    font-size: 30px;
+    font-weight: 700;
+}
+/************** end about ***********/
+
+/************** start teamt ***********/
+.team {
+    background-color: var(--dark);
+}
+
+.team-text {
+    color: var(--white);
+    position: relative;
+    font-weight: 600;
+}
+
+.team-text::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background: var(--main-color);
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+}
+
+.box h4 {
+    color: var(--white);
+    background: var(--main-color);
+    padding: 5px 0;
+}
+
+.tech img {
+    filter: grayscale(1);
+    max-width: 200px;
+}
+
+.tech img:hover {
+    filter: grayscale(0);
+}
+
+.project {
+    background: var(--dark);
+}
+
+
+.project h2 {
+    color: var(--white);
+}
+
+.card-title {
+    color: var(--dark);
+    font-weight: 600;
+}
+/************** end team ***********/
+/* Start Subscribe */
+.subscribe {
+    background-color: var(--dark-light);
+    border-radius: 11px;
+  }
+  .subscribe input[type="text"] {
+    border: none;
+    border-bottom: 1px solid white;
+  }
+  .subscribe input[type="text"]:focus {
+    outline: none;
+  }
+  .subscribe ::placeholder {
+    color: white;
+  }
+  .subscribe input[type="submit"] {
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+  }
+  /* End Subscribe */
+
+
+/* start footer  */
+.footer {
+    background-color: var(--dark);
+}
+
+  .footer .contact ul svg {
+    width: 20px;
+    height: 20px;
+  }
+  .footer .facebook {
+    background-color: #1877f2;
+  }
+  .footer .twitter {
+    background-color: #1da1f2;
+  }
+  .footer .linkedin {
+    background-color: #0077b5;
+  }
+  .footer .youtube {
+    background-color: #ff0000;
+  }
+ 
+/* end footer  */
